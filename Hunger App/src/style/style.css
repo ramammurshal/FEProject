@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCF0C8;
+    font-family: 'Hina Mincho', serif;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 50px 60px;
+}
+
+@media (max-width: 850px) {
+    main {
+        padding: 40px 30px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let angka = 0; // start 0-100
+        let angkaDiubah = 1; //start 1-0 sesuai mapping 0-100
+
+        let int = setInterval(myFunc, 30);
+
+        function myFunc() {
+            angka++;
+
+            if (angka > 99) {
+                clearInterval(int);
+            }
+
+            angkaDiubah = scale(angka, 1, 100, 1, 0);
+
+            console.log(angka);
+            console.log(angkaDiubah);
+        }
+
+        // Fungsi scale ini digunakan untuk mengembalikan nilai hasil konversi
+        function scale(number, inMin, inMax, outMin, outMax) {
+            return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+        }
+    </script>
+</body>
+
+</html>

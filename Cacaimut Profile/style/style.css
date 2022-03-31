@@ -1,0 +1,12 @@
+body {
+  height: 2500px;
+}
+
+.jumbotron {
+  padding-top: 2rem;
+  background-color: #e2edff;
+}
+
+#job {
+  background-color: #e2edff;
+}

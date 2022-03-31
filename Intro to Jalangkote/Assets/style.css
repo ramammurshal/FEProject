@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* CSS HEADER */
+header {
+    display: inline;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #f4f4f4;
+}
+
+.titleNav {
+    font-family: Nunito;
+    font-size: 22px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 45%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: "Bebas Neue";
+    font-size: 22px;
+    color: black;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg) translate(-1px, -1px);
+    background-color: black;
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg) translate(-2px, 0);
+    background-color: black;
+}
+
+/* Jumbotron */
+#jumbotron {
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.textHome {
+    flex-basis: 40%;
+    padding-top: 150px;
+    padding-bottom: 120px;
+    font-size: 60px;
+    font-family: Caveat;
+    text-align: center;
+}
+
+.gambarHome {
+    flex-basis: 60%;
+    padding-bottom: 80px;
+}
+
+.gambarHome img {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* CSS MAIN */
+/* Intro */
+#intro {
+    padding-top: 220px;
+    padding-bottom: 220px;
+    background-color: #ff9d14;
+}
+
+#intro p {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    font-family: Nunito;
+    font-style: italic;
+    color: white;
+}
+
+/* Sejarah */
+article#sejarah {
+    background-color: #f4f4f4;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.titleSejarah {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: Caveat;
+    font-size: 45px;
+}
+
+.container-row {
+    display: flex;
+}
+
+.isiSejarah {
+    flex-basis: 65%;
+    padding: 35px 50px;
+    text-align: justify;
+    font-family: Nunito;
+    font-size: 22px;
+}
+
+.slider {
+    flex-basis: 35%;
+    padding: 10px 0px;
+}
+
+.slider img {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 2px 2px 8px black;
+}
+
+.slider img:hover {
+    filter: saturate(150%);
+    box-shadow: 2px 2px 12px black;
+}
+
+/* Resep */
+article#resep {
+    background-color: #ff9d14;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.titleResep {
+    text-align: center;
+    font-family: Caveat;
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+.bahanKulit {
+    flex-basis: 50%;
+}
+
+.bahanIsi {
+    flex-basis: 50%;
+}
+
+.titleSubResep {
+    text-align: center;
+    text-decoration: underline;
+    font-family: Nunito;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.listBahan {
+    padding: 30px 100px;
+    font-family: Nunito;
+}
+
+.kotakanListResep {
+    background-color: #f59c1d;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+}
+
+.kotakanListResep:hover {
+    background-color: #c47608;
+}
+
+.kotakanListResep ul {
+    list-style-type: none;
+}
+
+/* Cara Buat */
+article#caraBuat {
+    background-color: #f4f4f4;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.titleCaraBuat {
+    text-align: center;
+    font-family: Caveat;
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+.listCaraBuat {
+    padding: 20px 150px;
+    font-family: Nunito;
+}
+
+.kotakanListCaraBuat {
+    background-color: #b7afa3;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+}
+
+.kotakanListCaraBuat:hover {
+    background-color: #9a8f7e;
+}
+
+.kotakanListCaraBuat ul {
+    list-style-type: none;
+}
+
+/* CSS FOOTER */
+footer {
+    background-color: #545454;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    color: white;
+}
+
+.titleFooter {
+    text-align: center;
+    font-family: Caveat;
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+.kotakanFooter {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #7a7874;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.kotakanFooter:hover {
+    background-color: #9c9a96;
+}
+
+.fotoFooter {
+    flex-basis: 40%;
+}
+
+.dataDiri {
+    flex-basis: 60%;
+}
+
+.fotoFooter img {
+    margin: 0 auto;
+    display: block;
+    width: 230px;
+    height: 230px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 50%;
+}
+
+.dataDiri {
+    padding-top: 35px;
+    padding-left: 50px;
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+
+/* Breakpoint responsive */
+@media screen and (max-width: 960px) {
+    nav ul {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .kotakanFooter .container-row {
+        flex-direction: column;
+    }
+
+    .dataDiri {
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .textHome {
+        flex-basis: 100%;
+    }
+
+    .gambarHome {
+        display: none;
+    }
+
+    .isiSejarah {
+        flex-basis: 100%;
+    }
+
+    .slider {
+        display: none;
+    }
+
+    .container-row {
+        flex-direction: column;
+    }
+
+    .listBahan {
+        padding: 20px 50px;
+    }
+
+    .listCaraBuat {
+        padding: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 713px) {
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f4;
+        transform: translateX(100%);
+        transition: all 0.8s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}

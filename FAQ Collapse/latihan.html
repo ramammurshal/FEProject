@@ -1,0 +1,17 @@
+<style>
+    div.active {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+</style>
+
+<div>
+    <button>Click on here</button>
+</div>
+
+<script>
+    document.querySelector('button').addEventListener('click', () => {
+        document.querySelector('button').parentNode.classList.toggle('active');
+    });
+</script>

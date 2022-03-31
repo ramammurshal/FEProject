@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Bookshelf App</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="assets/book-icon.png">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="assets/book.png" alt="book-icon">
+        <h1>Modern Bookshelf Application</h1>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- CONTAINER FORM -->
+        <div class="container container-form">
+            <div class="title">Masukkan Buku Bacaan Kamu!</div>
+            <hr class="hr-container">
+            <form id="form">
+                <div class="form-element">
+                    <p>Judul Buku</p>
+                    <input type="text" id="bookTitle" required>
+                </div>
+                <div class="form-element">
+                    <p>Penulis</p>
+                    <input type="text" id="bookAuthor" required>
+                </div>
+                <div class="form-element">
+                    <p>Tahun terbit</p>
+                    <input type="number" id="bookYear" required>
+                </div>
+                <div class="submit-form">
+                    <input type="submit" value="Input">
+                </div>
+            </form>
+        </div>
+
+        <hr class="global">
+
+        <!-- CONTAINER SEARCH BOOK?? -->
+        <div class="container search-book">
+            <form id="form-search">
+                <label>Cari buku: &nbsp;</label>
+                <input type="text" id="search-text">
+                <input type="submit" value="Cari">
+            </form>
+        </div>
+
+        <!-- Container UNREADED -->
+        <div class="container-row">
+            <div class="icon">
+                <img src="assets/unreaded.jpg" alt="unread-book" width="100%" height="100%">
+            </div>
+            <div class="container unreaded">
+                <div class="title">Buku yang belum kamu baca</div>
+                <div id="unreaded-list">
+                    <!-- Will filled on JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Container READED -->
+        <div class="container-row">
+            <div class="container readed">
+                <div class="title">Buku yang udah kamu baca</div>
+                <div id="readed-list">
+                    <!-- Will filled on JS -->
+                </div>
+            </div>
+            <div class="icon">
+                <img src="assets/readed.jfif" alt="readed-book" width="100%" height="100%">
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <label>Created By:</label>
+        <div>Ramz Technology</div>
+    </footer>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/dom.js"></script>
+    <script src="assets/load.js"></script>
+</body>
+
+</html>
